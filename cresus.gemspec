@@ -32,10 +32,10 @@ Gem::Specification.new do |spec|
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
   spec.add_dependency 'rails', '~> 5.0.0', '>= 5.0.0.1'
-# Use sqlite3 as the database for Active Record
-  spec.add_dependency 'sqlite3'
 # Use Puma as the app server
   spec.add_dependency 'puma', '~> 3.0'
+# adding database dependency
+  spec.add_dependency 'pg'
 # Use SCSS for stylesheets
   spec.add_dependency 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -44,6 +44,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+  spec.add_dependency 'haml'
 
 # Use jquery as the JavaScript library
   spec.add_dependency 'jquery-rails'
@@ -54,7 +55,7 @@ Gem::Specification.new do |spec|
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+  spec.add_dependency 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -62,6 +63,8 @@ Gem::Specification.new do |spec|
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   spec.add_development_dependency 'byebug'# platform: :mri
 
+# Use sqlite3 as the database for Active Record (in dev)
+  spec.add_development_dependency 'sqlite3'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   spec.add_development_dependency 'web-console'
   spec.add_development_dependency 'listen', '~> 3.0.5'
