@@ -1,23 +1,18 @@
 - content_for :navbar, render("layouts/user_nav")
-= render :layout => "layouts/base" do
+= render :layout => "layouts/minimal" do
   .page-header
-    .row
-      .col-md-7
-        %h2= @title
-        = yield :description
-      .col-md-2
-        = yield :actions
+    .container
+      .row.row-same-height
+        .col-md-12.col-sm-height.col-middle
+          %h2.m0= @title
+          = yield :description
+        .col-md-2.col-sm-height.col-middle
+          = yield :actions
   / /.page-header
-  .row
-    #content.col-md-9
+  .container
+    .row
+      = render "layouts/flashes"
+  .container-fluid
+    #content.col-md-12
       = yield
     / /#content
-    #sidebar.col-md-3
-      %h6 Menu
-      %p
-      %ul.nav.nav-tabs.nav-stacked.nav-caret-left
-        = activatable_li_tag_with_link "Sub menu", nil
-        = activatable_li_tag_with_link "Another menu", "#"
-        = activatable_li_tag_with_link "A last one", "#"
-    / /#sidebar
-  / /.row

@@ -77,5 +77,5 @@ Gem::Specification.new do |spec|
   #spec.add_dependency 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
   # Theme dependency
-  spec.add_dependency "dresssed-gimlet", "~> 3.0.10"
+  spec.add_dependency "dresssed-ives", "~> 1.0.39"
 end
