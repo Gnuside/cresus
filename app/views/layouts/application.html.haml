@@ -1,10 +1,23 @@
-!!!
-%html
-  %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Cresus
-    = csrf_meta_tags
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  %body
-    = yield
+- content_for :navbar, render("layouts/user_nav")
+= render :layout => "layouts/base" do
+  .page-header
+    .row
+      .col-md-7
+        %h2= @title
+        = yield :description
+      .col-md-2
+        = yield :actions
+  / /.page-header
+  .row
+    #content.col-md-9
+      = yield
+    / /#content
+    #sidebar.col-md-3
+      %h6 Menu
+      %p
+      %ul.nav.nav-tabs.nav-stacked.nav-caret-left
+        = activatable_li_tag_with_link "Sub menu", nil
+        = activatable_li_tag_with_link "Another menu", "#"
+        = activatable_li_tag_with_link "A last one", "#"
+    / /#sidebar
+  / /.row
