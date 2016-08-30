@@ -31,9 +31,13 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "minitest", "~> 5.0"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-  spec.add_dependency 'rails', '~> 5.0.0', '>= 5.0.0.1'
+  spec.add_dependency 'rails', '~> 5'
 # Use Puma as the app server
   spec.add_dependency 'puma', '~> 3.0'
+
+  spec.add_dependency 'haml'
+  spec.add_dependency 'haml-rails'
+
 # adding database dependency
   spec.add_dependency 'pg'
 # Use SCSS for stylesheets
@@ -44,8 +48,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-  spec.add_dependency 'haml'
-
 # Use jquery as the JavaScript library
   spec.add_dependency 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
