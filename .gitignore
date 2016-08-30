@@ -78,3 +78,7 @@ bower.json
 
 # Ignore Byebug command history file.
 .byebug_history
+
+
+# After buying dressed.com theme.
+Gemfile

@@ -75,4 +75,7 @@ Gem::Specification.new do |spec|
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
   # FIXME
   #spec.add_dependency 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+  # Theme dependency
+  spec.add_dependency "dresssed-gimlet", "~> 3.0.10"
 end
