@@ -31,6 +31,8 @@ gem 'jbuilder', '~> 2.5'
 
 # Using devise for auth
 gem 'devise'
+gem 'cancancan'
+gem 'rolify'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -57,6 +59,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Theme : You need a key to use this theme.
 #source "https://dresssed.com/gems/XXXXXXXXXXXXX/" do
-#  gem "dresssed-ives", "~> 1.0.39"
+  gem "dresssed-ives", "~> 1.0.39"
 #end
 
